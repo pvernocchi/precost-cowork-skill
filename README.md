@@ -9,6 +9,7 @@ It estimates a credit range, highlights ways to run leaner, and helps you choose
 whether to proceed in Cowork or use a lighter Copilot option.
 
 [![Cowork skill](https://img.shields.io/badge/Microsoft-Copilot%20Cowork-5B5FC7?logo=microsoft&logoColor=white)](https://www.microsoft.com/microsoft-365/copilot)
+[![Cowork skill](https://img.shields.io/badge/Microsoft-Cowork%20PAYG%20Consumption-5B5FC7?logo=microsoft&logoColor=white)](https://www.microsoft.com/microsoft-365/copilot)
 [![Markdown](https://img.shields.io/badge/docs-Markdown-083FA1?logo=markdown&logoColor=white)](https://www.markdownguide.org/)
 [![Fork of Fepilot/cowork-precost-skill](https://img.shields.io/badge/fork-Fepilot%2Fcowork--precost--skill-181717?logo=github&logoColor=white)](https://github.com/Fepilot/cowork-precost-skill)
 
