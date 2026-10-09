@@ -35,19 +35,15 @@ how to continue.
 
 ## 🚀 Use it
 
-Download the `precost` folder as .zip file.
-Install the file from Cowork as a Cowork skill, keeping `SKILL.md` and all
-three reference files together. Then invoke it with **`/precost`** or phrases
-such as:
+Download the `precost` [latest release](https://github.com/pvernocchi/precost-cowork-skill/releases/) .zip file.
+Install the file from Cowork as a Cowork skill, keeping the current file and folder structure. Invoke it with **`/precost`** or phrases such as:
 
 - “Estimate this task”
 - “What will this cost?”
 - “Pre-check first”
 - “Is this worth running in Cowork?”
 
-The skill is also intended to run at the beginning of a **new task delegated to
-Cowork**. It does not repeat the check for follow-ups or refinements in a task
-already in progress.
+It does not repeat the check for follow-ups or refinements in a task already in progress.
 
 ## 🔍 How the estimate works
 
