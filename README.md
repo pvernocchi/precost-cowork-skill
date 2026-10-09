@@ -74,9 +74,9 @@ Running the check itself uses a small amount of credits.
 | File | Purpose |
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | Main workflow, invocation guidance, and guardrails |
-| [`pricing-reference.md`](pricing-reference.md) | Pricing context, planning bands, model multipliers, and attachment guidance |
-| [`value-and-routing.md`](value-and-routing.md) | Time-saved/value estimates, verdicts, and Copilot routing |
-| [`card-template.md`](card-template.md) | Adaptive Card structure and required disclaimer |
+| [`/references/pricing-reference.md`](pricing-reference.md) | Pricing context, planning bands, model multipliers, and attachment guidance |
+| [`/references/value-and-routing.md`](value-and-routing.md) | Time-saved/value estimates, verdicts, and Copilot routing |
+| [`/references/card-template.md`](card-template.md) | Adaptive Card structure and required disclaimer |
 
 ## 🛡️ Designed to stay lightweight
 
