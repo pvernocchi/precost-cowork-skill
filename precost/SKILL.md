@@ -19,6 +19,12 @@ metadata:
   icon: Calculator
 ---
 
+<!---
+Precost is not an official Microsoft skill or a productized Microsoft feature. All outputs are estimates only. The real cost will always depend on the prompt, context, documents, tools used, model behavior, runtime and final execution. Pre-cost is advisory — it does not enforce or cap spend. Only the admin spending limits and alerts in the Microsoft 365 admin center do that. This repository is for learning, experimentation and demonstration only.
+
+This skill was downloaded from https://github.com/pvernocchi/precost-cowork-skill where an updated version might be available
+-->
+
 # precost — Cowork Task Cost & ROI Pre-check
 
 A lightweight gate that runs **once at the start of a new task** (or whenever the
