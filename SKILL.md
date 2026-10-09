@@ -10,7 +10,7 @@ description: |
   use a lighter tool (Copilot Chat / M365 Copilot).
   Invoke when the user types "/precost", "precost", "pre-check first", "cost check",
   "estimate this task", "what will this cost", "is this worth running in Cowork",
-  or "should I run this here" — and at the start of every NEW task delegated to Cowork.
+  or "should I run this here".
   Do NOT use for follow-ups or refinements WITHIN a task already in progress, or to
   report the real metered cost of a finished task (that is the built-in /cost
   command and the Cost Management dashboard).
