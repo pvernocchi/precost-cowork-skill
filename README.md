@@ -37,7 +37,8 @@ how to continue.
 
 ## 🚀 Use it
 
-Install the complete repository as a Cowork skill, keeping `SKILL.md` and all
+Download the `precost` folder as .zip file.
+Install the file from Cowork as a Cowork skill, keeping `SKILL.md` and all
 three reference files together. Then invoke it with **`/precost`** or phrases
 such as:
 
