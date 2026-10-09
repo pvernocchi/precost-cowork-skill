@@ -29,25 +29,25 @@ decide whether to proceed, proceed leaner, or switch to a cheaper tool.
 
 Keep it **fast**. This is a quick estimate, not research. The only lookups
 allowed are the cheap, local ones: read the active model from the session, list
-attachments with `Glob`, and **Read the companion reference files in this
-folder**. Do **not** call search, email, calendar, web, or file-content tools to
-produce the estimate.
+attachments with `Glob`, and **Read the companion reference files in the
+`references/` subfolder**. Do **not** call search, email, calendar, web, or
+file-content tools to produce the estimate.
 
 ## Reference files (load on demand — cheap local Reads)
 
-All the pricing/value detail lives in three files in this folder so this workflow
-stays short. **Read the relevant file when the step says to** — a local `Read` is
-cheap and fast, unlike web/search.
+All the pricing/value detail lives in three files in the `references/` subfolder
+so this workflow stays short. **Read the relevant file when the step says to** —
+a local `Read` is cheap and fast, unlike web/search.
 
-- **`pricing-reference.md`** — official Cowork/Copilot pricing, the credit model,
-  model cost multipliers (§4), attachment weights (§5), base credit bands (§6),
-  and the adjustment formula (§7). Use it in Steps 1–3.
-- **`value-and-routing.md`** — time-saved/value bands & formula (§1), verdict
-  logic (§2), which-Copilot-to-use routing (§3), and the **step-by-step
-  instructions** for doing the task in M365 Copilot / Copilot Chat (§4). Use it in
-  Steps 4, 6, and 8.
-- **`card-template.md`** — the ready-to-fill Adaptive Card JSON skeleton. Use it
-  in Step 7.
+- **`references/pricing-reference.md`** — official Cowork/Copilot pricing, the
+  credit model, model cost multipliers (§4), attachment weights (§5), base credit
+  bands (§6), and the adjustment formula (§7). Use it in Steps 1–3.
+- **`references/value-and-routing.md`** — time-saved/value bands & formula (§1),
+  verdict logic (§2), which-Copilot-to-use routing (§3), and the
+  **step-by-step instructions** for doing the task in M365 Copilot / Copilot Chat
+  (§4). Use it in Steps 4, 6, and 8.
+- **`references/card-template.md`** — the ready-to-fill Adaptive Card JSON
+  skeleton. Use it in Step 7.
 
 These files are the **single source of truth** for every number this skill
 quotes. Do not invent figures that aren't in them.
@@ -75,8 +75,9 @@ Read these five signals to build the most approximate estimate, from the prompt 
 session + a quick attachment listing only — no expensive lookups.
 
 1. **Model in use.** Detect the active model from the session/environment, then
-   apply its credit multiplier. **The multiplier table is `pricing-reference.md`
-   §4** (anchored to the Cowork default, **Opus 4.8 = 1.0×**; 1 credit ≈ $0.01).
+   apply its credit multiplier. **The multiplier table is
+   `references/pricing-reference.md` §4** (anchored to the Cowork default,
+   **Opus 4.8 = 1.0×**; 1 credit ≈ $0.01).
    If the model can't be determined, assume the Cowork default (Opus 4.8, 1.0×)
    and say so on the card.
 2. **Context size.** Roughly how much material the model must read/hold — sources,
@@ -92,25 +93,25 @@ session + a quick attachment listing only — no expensive lookups.
      multi-step workflows, or anything that spawns subagents.
 5. **Attachments.** List them (`Glob input/**/*`) and note type + size. **Format
    drives credit weight far more than file size — the weight table is
-   `pricing-reference.md` §5.** (`.md` cheapest; PDFs/slides/images cost
-   multiples more.)
+   `references/pricing-reference.md` §5.** (`.md` cheapest; PDFs/slides/images
+   cost multiples more.)
 
-> Read `pricing-reference.md` now to pull the model-multiplier and
+> Read `references/pricing-reference.md` now to pull the model-multiplier and
 > attachment-weight tables for Steps 1–3.
 
 ## Step 2 — Classify the base task (Light / Medium / Heavy)
 
 Judge the task on sources, reasoning depth, and deliverables to set the **base**
-credit band. **The band table (credits + USD per class) is `pricing-reference.md`
-§6.** Pick the class by the **heaviest signal present** (one short email summary =
-Light; multi-source briefing + Excel + deck = Medium; 6-month data analysis +
-leadership report vs. prior period = Heavy).
+credit band. **The band table (credits + USD per class) is
+`references/pricing-reference.md` §6.** Pick the class by the **heaviest signal
+present** (one short email summary = Light; multi-source briefing + Excel + deck
+= Medium; 6-month data analysis + leadership report vs. prior period = Heavy).
 
 ## Step 3 — Adjust the estimate (model + one class bump)
 
-Turn the base band into the final band with the formula in **`pricing-reference.md`
-§7** — deliberately just **two** levers, so the estimate is reproducible and the
-badge always matches the number:
+Turn the base band into the final band with the formula in
+**`references/pricing-reference.md` §7** — deliberately just **two** levers, so
+the estimate is reproducible and the badge always matches the number:
 
 ```
 adjusted_credits ≈ base_band(effective_class) × model_multiplier
@@ -132,8 +133,8 @@ adjusted_credits ≈ base_band(effective_class) × model_multiplier
 Map the task to the Cowork ROI categories and **sum the Typical minutes saved**
 for the categories it touches (a multi-part task touches several). **The category
 table, the value formula, and the default `HOURLY_RATE` (€75/hr) are in
-`value-and-routing.md` §1.** Cost is USD; value is the user's currency; do **not**
-invent an FX rate — present them side by side.
+`references/value-and-routing.md` §1.** Cost is USD; value is the user's
+currency; do **not** invent an FX rate — present them side by side.
 
 ## Step 5 — Sustainability check (recommendations + a leaner prompt)
 
@@ -158,7 +159,7 @@ applies, say the task is already running efficiently and skip the recommendation
 ## Step 6 — Verdict & whether to suggest an alternative
 
 Apply the **verdict logic and the which-Copilot-to-use routing table in
-`value-and-routing.md` §2–§3**:
+`references/value-and-routing.md` §2–§3**:
 
 - **Strongly positive** — time-value clearly dwarfs credit cost (typical for
   Medium/Heavy multi-deliverable tasks). Recommend **proceed**.
@@ -187,7 +188,7 @@ file. Keep it compact and professional. Include, in this order:
    > research-based pricing and time-savings bands (directional, not a
    > guarantee). Running this check itself uses a small amount of credits.*
 
-A **ready-to-fill JSON skeleton** lives in **`card-template.md`** (this folder) —
+A **ready-to-fill JSON skeleton** lives in **`references/card-template.md`** —
 Read it at this step, fill in the values, keep colours subtle and on-brand, and
 drop the "Run it leaner" block when Step 5 found no levers.
 
@@ -204,10 +205,10 @@ decides after reading the numbers. Tailor the options to what applies:
     model where supported, convert heavy attachments to `.md`, tighten scope),
     briefly list the adjustments made, then run the task with the leaner setup.
   - **"Use Copilot Chat / M365 Copilot instead"** — *offer for marginal/Light
-    tasks.* On selection: **Read `value-and-routing.md` §4, pick the recipe that
-    matches the task, and walk the user through the concrete step-by-step** for
-    that tool (which app, which button, what to type). Then stop — don't run it in
-    Cowork.
+    tasks.* On selection: **Read `references/value-and-routing.md` §4, pick the
+    recipe that matches the task, and walk the user through the concrete
+    step-by-step** for that tool (which app, which button, what to type). Then
+    stop — don't run it in Cowork.
 
 **Conditional follow-up:** If the user picks plain **"Proceed in Cowork"** *and* a
 sustainable rewrite is available, ask one more short question before starting:
@@ -222,7 +223,7 @@ more than these questions.
 - **Run once per task, at the start.** Never re-run on follow-ups or refinements
   within the same task.
 - **Only cheap, local lookups for the estimate** — detect the active model, list
-  attachments (`Glob`), and Read the companion files in this folder. Do
+  attachments (`Glob`), and Read the companion files in `references/`. Do
   **not** call search, email, calendar, web, or file-content tools. Stay fast.
 - **Never present the estimate as the real bill.** Always show the disclaimer. The
   authoritative figures are `/cost` and the Cost Management dashboard, which the
@@ -238,8 +239,8 @@ more than these questions.
 - **Card is inline only** — render via the `render-ui` skill; never write it to
   `output/`.
 - **No fabrication.** Use only the credit bands, model multipliers, attachment
-  weights, time-savings bands, and routing in `pricing-reference.md` and
-  `value-and-routing.md`, plus the signals you can actually observe (model,
-  attachments, prompt). Do not invent credit figures, dollar amounts, savings
+  weights, time-savings bands, and routing in `references/pricing-reference.md`
+  and `references/value-and-routing.md`, plus the signals you can actually
+  observe (model, attachments, prompt). Do not invent credit figures, dollar amounts, savings
   numbers, an FX rate, or a model that isn't in use. If the task doesn't map
   cleanly to a class or category, say it's a rough estimate rather than guessing.
