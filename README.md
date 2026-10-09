@@ -1,6 +1,6 @@
 <div align="center">
 
-# 💸 precost
+# 💸 /precost
 
 ### Know the likely cost. Understand the potential value. Then decide.
 
