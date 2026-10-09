@@ -1,5 +1,3 @@
-f<div align="center">
-
 # 💸 /precost
 
 ### Know the likely cost. Understand the potential value. Then decide.
@@ -19,8 +17,7 @@ whether to proceed in Cowork or use a lighter Copilot option.
 
 ## ✨ What it does
 
-`precost` runs once at the start of a new Cowork task—or whenever you ask for
-`/precost`—and provides a quick, transparent estimate before the substantive
+`/precost` provides a quick, transparent estimate before the substantive
 work begins. It considers the task, active model, context, tools, and attachments
 to show:
 
@@ -92,6 +89,10 @@ Running the check itself uses a small amount of credits.
 
 This repository is a fork of
 [**Fepilot/cowork-precost-skill**](https://github.com/Fepilot/cowork-precost-skill).
+
+## Disclaimer
+>Precost **is not** an official Microsoft skill or a productized Microsoft feature. All outputs are estimates only. The real cost will always depend on the prompt, context, documents, tools used, model behavior, runtime and final execution.
+>Pre-cost is advisory — it does not enforce or cap spend. Only the admin spending limits and alerts in the Microsoft 365 admin center do that. This repository is for learning, experimentation and demonstration only.
 
 ---
 
