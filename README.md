@@ -86,9 +86,10 @@ Running the check itself uses a small amount of credits.
 This repository is a fork of
 [**Fepilot/cowork-precost-skill**](https://github.com/Fepilot/cowork-precost-skill).
 
-## Disclaimer
->Precost **is not** an official Microsoft skill or a productized Microsoft feature. All outputs are estimates only. The real cost will always depend on the prompt, context, documents, tools used, model behavior, runtime and final execution.
->Pre-cost is advisory — it does not enforce or cap spend. Only the admin spending limits and alerts in the Microsoft 365 admin center do that. This repository is for learning, experimentation and demonstration only.
+## 📝 Disclaimer
+
+This is a community skill, not an official Microsoft product, and it comes with no warranty. It's a guidance aid — not a billing or spending control. Microsoft product names, capabilities, license entitlements, and Cowork consumption are subject to change, so verify the current details for your tenant against official Microsoft documentation, and confirm your organization's licensing before relying on any routing recommendation.
+
 
 ---
 
