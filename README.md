@@ -36,7 +36,9 @@ how to continue.
 ## 🚀 Use it
 
 Download the `precost` [latest release](https://github.com/pvernocchi/precost-cowork-skill/releases/) .zip file.
-Install the file from Cowork as a Cowork skill, keeping the current file and folder structure. Invoke it with **`/precost`** or phrases such as:
+Follow the [installation guide](INSTALL.md) to verify the archive structure and
+upload it from Cowork's **Customize** > **Skills** page. Invoke it with
+**`/precost`** or phrases such as:
 
 - “Estimate this task”
 - “What will this cost?”
